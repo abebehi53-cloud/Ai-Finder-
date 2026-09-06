@@ -1,0 +1,86 @@
+<div id="loginPage" class="page">
+  <div class="card">
+    <div class="logo">🔎</div>
+
+    <h1>AI Finder</h1>
+    <p>Sign in to your account</p>
+
+    <input id="email" type="email" placeholder="Email address">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Sign In</button>
+
+    <a href="#" onclick="forgotPassword(); return false;">
+      Forgot Password?
+    </a>
+
+    <p>
+      Don't have an account?
+      <span onclick="showSignup()">Sign Up</span>
+    </p>
+
+    <div id="message"></div>
+  </div>
+</div>
+
+<div id="signupPage" class="page hidden">
+  <div class="card">
+    <div class="logo">🔎</div>
+
+    <h1>Create Account</h1>
+    <p>Join AI Finder</p>
+
+    <input id="name" type="text" placeholder="Your name">
+    <input id="signupEmail" type="email" placeholder="Email address">
+    <input id="signupPassword" type="password" placeholder="Password">
+
+    <button onclick="signup()">Create Account</button>
+
+    <p>
+      Already have an account?
+      <span onclick="showLogin()">Sign In</span>
+    </p>
+
+    <div id="signupMessage"></div>
+  </div>
+</div>
+
+<div id="appPage" class="hidden">
+  <header>
+    <strong>🔎 AI Finder</strong>
+    <button onclick="logout()">Log Out</button>
+  </header>
+
+  <main>
+    <h1>Welcome 👋</h1>
+    <p>Find public profile information.</p>
+
+    <div class="finder">
+      <h2>AI Finder</h2>
+
+      <label for="photo">📷 Upload Photo / Post</label>
+      <input id="photo" type="file" accept="image/*">
+
+      <p id="photoName">No photo selected</p>
+
+      <img id="preview" class="hidden">
+
+      <hr>
+
+      <input
+        id="username"
+        type="text"
+        placeholder="Enter public username"
+      >
+
+      <button onclick="searchProfiles()">
+        🔍 Search
+      </button>
+    </div>
+
+    <div id="results">
+      <h2>Results</h2>
+      <p>No search yet.</p>
+    </div>
+  </main>
+</div>
